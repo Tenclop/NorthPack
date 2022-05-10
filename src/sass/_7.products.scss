@@ -1,0 +1,106 @@
+.products {
+  background-color: var(--clr-secondary-black);
+  grid-column: container-start / container-end;
+  @extend %sec-padding;
+
+  &--sale {
+    @extend %flex-center;
+    flex-direction: column;
+    font-family: "Rum Raisin", sans-serif;
+    color: var(--clr-primary-white);
+    padding: 2rem;
+
+    h1 {
+      font-size: font-size("font-size-superlarge");
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: font-size("font-size-medium");
+      text-transform: capitalize;
+    }
+  }
+  &--container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-rows: 1fr;
+
+    &__item {
+      padding: 1rem 4rem;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      &-text {
+        @extend %flex-center;
+        flex-direction: column;
+        color: var(--clr-primary-white);
+        font-family: "Oxygen", sans-serif;
+        font-size: font-size("font-size-small");
+        font-weight: font-weight("font-weight-bolder");
+        line-height: 2;
+        position: relative;
+        cursor: pointer;
+
+        .details {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: auto;
+          height: auto;
+          transform: translateX(-50%) translateY(-50%);
+          opacity: 0;
+          transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+          padding-top: calc(1rem + 0.5vh);
+          text-align: center;
+          cursor: pointer;
+
+          & a:link,
+          & a:visited {
+            font-family: "Oxygen", sans-serif;
+            font-size: font-size("font-size-small");
+            font-weight: font-weight("font-weight-bolder");
+          }
+        }
+
+        &:hover > *,
+        &:active > * {
+          opacity: 0;
+        }
+
+        &:hover .details,
+        &:active .details {
+          opacity: 1;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  @include media-tablet {
+    &--container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto-fit, 1fr);
+
+      &__item {
+        padding: 2rem 8rem;
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        &-text {
+          font-size: font-size("font-size-regular");
+
+          .details {
+            & a:link,
+            & a:visited {
+              font-size: font-size("font-size-regular");
+            }
+          }
+        }
+      }
+    }
+  }
+}

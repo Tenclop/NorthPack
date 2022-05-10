@@ -1,0 +1,73 @@
+/* Break-Point 1300px Desktop*/
+@mixin media-desktop {
+  @media screen and (min-width: break-point(breake-point-desktop)) {
+    @content;
+  }
+}
+
+/* Break-Point 1100px Between Desktop And Tablet */
+@mixin media-betweenTD {
+  @media screen and (max-width: break-point(break-point-betweenTD)) {
+    @content;
+  }
+}
+
+/* Break-Point 800px Tablet */
+@mixin media-tablet {
+  @media screen and (max-width: break-point(break-point-tablet)) {
+    @content;
+  }
+}
+
+/* Break-Point 600 */
+@mixin media-medium {
+  @media screen and (max-width: break-point(break-point-medium)) {
+    @content;
+  }
+}
+
+/* Break-Point 400px Phone */
+@mixin media-small {
+  @media screen and (max-width: break-point(break-point-small)) {
+    @content;
+  }
+}
+
+/* Break-Point 360px Phone */
+@mixin media-supersmall {
+  @media screen and (max-width: break-point(break-point-small)) {
+    @content;
+  }
+}
+::selection {
+  background-color: var(--clr-primary-gray);
+}
+
+@import "1.resets";
+@import "2.variables";
+@import "3.utilities";
+@import "4.hero";
+@import "5.arrivals";
+@import "6.types";
+@import "7.products";
+@import "8.about";
+@import "9.info";
+@import "10.footer";
+@import "11.shop";
+
+/* Placeholders */
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+%sec-padding {
+  padding: 6vh 4vw;
+}

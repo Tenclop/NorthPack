@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+
+    <script
+      src="https://kit.fontawesome.com/fbadad80a0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rum+Raisin&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--    
+       font-family: 'Oxygen', sans-serif;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-family: 'Rum Raisin', sans-serif; -->
+    <title>NorthPack</title>
+  </head>
+
+  <body class="container">
+    <!-- Section Hero -->
+    <section class="section--hero" id="Home">
+      <!-- Section Header -->
+      <header class="section--hero__header">
+        <!-- hamburger lines container -->
+        <div class="section--hero__header-wrapper_menu">
+          <!-- <div class="section--hero__header-wrapper_menu_line half start"></div> -->
+          <div class="section--hero__header-wrapper_menu_line"></div>
+          <!-- <div class="section--hero__header-wrapper_menu_line half end"></div> -->
+        </div>
+
+        <!-- Overlay -->
+        <div class="section--hero__header__overlay"></div>
+
+        <!-- Nav Container -->
+        <nav class="section--hero__header__nav" id="nav">
+          <!-- Logo -->
+          <a href="#Home" class="section--hero__header__nav--logo scroll-link">
+            <img src="./assets/logo.png" alt="logo" />
+            NorthPack
+          </a>
+          <div class="section--hero__header__nav--links-container">
+            <ul class="section--hero__header__nav--links-container-ul">
+              <!-- Shop li -->
+              <li class="section--hero__header__nav--links-container-ul__item">
+                <a
+                  href="shop.html"
+                  class="section--hero__header__nav--links-container-ul__item-a"
+                  data-text="Shop"
+                  >Shop</a
+                >
+              </li>
+
+              <!-- About li -->
+              <li class="section--hero__header__nav--links-container-ul__item">
+                <a
+                  href="#About"
+                  class="section--hero__header__nav--links-container-ul__item-a scroll-link"
+                  data-text="About"
+                  >About</a
+                >
+              </li>
+
+              <!-- Contact li -->
+              <li class="section--hero__header__nav--links-container-ul__item">
+                <a
+                  href="#Contact"
+                  class="section--hero__header__nav--links-container-ul__item-a scroll-link"
+                  data-text="Contact"
+                  >Contact</a
+                >
+              </li>
+
+              <!-- Log In li -->
+              <li class="section--hero__header__nav--links-container-ul__item">
+                <a
+                  href="#Log In"
+                  class="section--hero__header__nav--links-container-ul__item-a scroll-link"
+                  data-text="Log In"
+                  >Log In</a
+                >
+              </li>
+              <!-- cart -->
+              <li
+                class="section--hero__header__nav--links-container-ul__item"
+                id="cart-info"
+              >
+                <a
+                  href="#Cart"
+                  class="section--hero__header__nav--links-container-ul__item-a scroll-link"
+                  data-text="Cart"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <!-- <p
+                    class="section--hero__header__nav--links-container-ul__item-a-para"
+                  >
+                    <span id="item-count">2 </span> items - $<span
+                      class="section--hero__header__nav--links-container-ul__item-a-para_item-total"
+                      >10.49</span
+                    >
+                  </p> -->
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div id="cart" class="section--hero__header__cart">
+          <!--          
+          <div class="section--hero__header__cart-content cart-item">
+            <img
+              src="./assets/4.Products/Backpacks/backpack-1.png"
+              class="img-fluid rounded-circle"
+              id="item-img"
+              alt=""
+            />
+            <div class="section--hero__header__cart-content_item-text">
+              <p
+                id="cart-item-title"
+                class="section--hero__header__cart-content_title"
+              >
+                cart item
+              </p>
+
+              <span
+                id="cart-item-price"
+                class="section--hero__header__cart-content_price"
+                >$10.99</span
+              >
+            </div>
+            <a
+              href="#"
+              id="cart-item-remove"
+              class="section--hero__header__cart-content_remove"
+            >
+              <i class="fas fa-trash"></i>
+            </a>
+          </div>
+  
+          <div class="section--hero__header__cart-content cart-item">
+            <img
+              src="./assets/4.Products/Backpacks/backpack-1.png"
+              class="img-fluid rounded-circle"
+              id="item-img"
+              alt=""
+            />
+            <div class="section--hero__header__cart-content_item-text">
+              <p
+                id="cart-item-title"
+                class="section--hero__header__cart-content_title"
+              >
+                cart item
+              </p>
+              <span
+                id="cart-item-price"
+                class="section--hero__header__cart-content_price"
+                >$10.99</span
+              >
+            </div>
+            <a
+              href="#"
+              id="cart-item-remove"
+              class="section--hero__header__cart-content_remove"
+            >
+              <i class="fas fa-trash"></i>
+            </a>
+          </div>
+           -->
+          <!-- cart total -->
+          <div class="section--hero__header__cart-content_total">
+            <h5>total &nbsp</h5>
+            <h5>$<strong id="cart-total">10.00</strong></h5>
+          </div>
+          <!--end cart total -->
+
+          <!-- cart buttons -->
+          <div class="section--hero__header__cart-content_buttons">
+            <a href="#" id="clear-cart" class="btn">clear cart</a>
+            <a href="#" class="btn btn-checkout">checkout</a>
+          </div>
+          <!--end of  cart buttons -->
+          <!--  -->
+        </div>
+
+        <div class="section--hero__login-page_overlay"></div>
+        <div class="section--hero__login-page">
+          <div class="section--hero__login-page__form">
+            <form
+              class="section--hero__form--register-form"
+              id="registration-form"
+            >
+              <div class="section--hero__form--register-form__username">
+                <label for="stuff" class="fa-solid fa-user-ninja"></label>
+                <input
+                  type="text"
+                  id="username"
+                  placeholder="Name"
+                  required
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="section--hero__form--register-form__password">
+                <label class="fa-solid fa-unlock"></label>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Password"
+                  required
+                  autocomplete="off"
+                />
+              </div>
+              <div class="section--hero__form--register-form__email">
+                <label class="fa-solid fa-envelope"></label>
+                <input
+                  type="text"
+                  id="email"
+                  placeholder="Email address"
+                  required
+                  autocomplete="off"
+                />
+              </div>
+              <button type="submit">create</button>
+              <p class="section--hero__form--register-form_message">
+                <span>Already registered?</span>
+                <a href="#" class="signIn fade">Sign In</a>
+              </p>
+            </form>
+            <!--  -->
+            <form class="section--hero__form--login-form">
+              <div class="section--hero__form--login-form__username">
+                <label for="stuff" class="fa-solid fa-user-ninja"></label>
+                <input type="text" placeholder="Username" required />
+              </div>
+
+              <div class="section--hero__form--login-form__password">
+                <label class="fa-solid fa-unlock"></label>
+                <input type="password" placeholder="Password" required />
+              </div>
+              <button type="submit">login</button>
+              <p class="section--hero__form--register-form_message">
+                <span>Not registered?</span>
+                <a href="#" class="register fade">Create an account</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </header>
+
+      <div class="section--hero__bg">
+        <div class="section--hero__bg-text">
+          <h1>Plan your adventure</h1>
+          <div class="section--hero__bg-text_shopNow">
+            <h3><a href="shop.html"> Shop now</a></h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="arrivals">
+      <!-- Arrivals conainer txt -->
+      <div class="arrivals--container">
+        <div class="arrivals--container__newArrivals">
+          <div class="arrivals--container__newArrivals-txt">
+            <h1>NEW ARRIVALS</h1>
+            <div class="arrivals--container__newArrivals-shopNow">
+              <a href="shop.html"> Shop Now </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrivals Img -->
+        <div class="arrivals--container__imgContainer"></div>
+      </div>
+    </section>
+
+    <section class="types">
+      <div class="types--container">
+        <div class="types--container-holder gallery__content-1">
+          <div class="types--container-holder__text">
+            <div class="types--container-holder__text-overlay">
+              <a href="shop.html"> Travel Packs</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="types--container-holder gallery__content-2">
+          <div class="types--container-holder__text">
+            <div class="types--container-holder__text-overlay">
+              <a href="shop.html"> Backpacks</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="types--container-holder gallery__content-3">
+          <div class="types--container-holder__text">
+            <div class="types--container-holder__text-overlay">
+              <a href="shop.html"> Duffle Bags</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="products--sale">
+        <h1>now on sale</h1>
+        <h3>up to 50% off</h3>
+      </div>
+
+      <div class="products--container">
+        <!-- item start -->
+        <div class="products--container__item">
+          <img
+            src="./assets/4.Products/Backpacks/backpack-5.png"
+            alt="backpack"
+          />
+          <div class="products--container__item-text">
+            <p>Canvas Backpack</p>
+            <span>
+              <a href=""><s>$75.00</s>&nbsp $65.50</a>
+            </span>
+            <span class="details"><a href="shop.html">View Details</a></span>
+          </div>
+        </div>
+        <!-- item end -->
+
+        <!-- item start -->
+        <div class="products--container__item">
+          <img
+            src="./assets/4.Products/Travel-packs/travelPack-2.png"
+            alt="backpack"
+          />
+          <div class="products--container__item-text">
+            <p>Tehnical Backpack</p>
+            <span
+              ><a href=""><s>$130.00</s>&nbsp $99.99</a></span
+            >
+            <span class="details"><a href="shop.html">View Details</a></span>
+          </div>
+        </div>
+        <!-- item end -->
+
+        <!-- item start -->
+        <div class="products--container__item">
+          <img
+            src="./assets/4.Products/Backpacks/backpack-2.png"
+            alt="backpack"
+          />
+          <div class="products--container__item-text">
+            <p>Standard Backpack</p>
+            <span
+              ><a href=""><s>$64.99</s>&nbsp $37.99</a></span
+            >
+            <span class="details"><a href="shop.html">View Details</a></span>
+          </div>
+        </div>
+        <!-- item end -->
+      </div>
+    </section>
+
+    <section class="about" id="About">
+      <div class="about--container">
+        <div class="about--container__firstHalf">
+          <div class="about--container__firstHalf-text">
+            <h1>Design philosophy</h1>
+            <h3>
+              Our products are designed with both Scandinavian aesthetics and
+              functionality in mind. We offer our customers the best quality to
+              enjoy life without worrying about what or how to transport their
+              belongings. Also, our timeless products are made with great skill
+              on design, sustainability, and flexibility. By mixing the new and
+              old togheter with a touch of pop and underground, so our design
+              its inspired by the newst trends, as well as timeless popular
+              influences.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info" id="Contact">
+      <!-- Footer Content -->
+      <div class="info__content">
+        <!-- About us -->
+        <div class="info__content--about-us info__content--section">
+          <h3
+            class="info__content--about-us__title info__content--section__title"
+          >
+            About us
+          </h3>
+          <p
+            class="info__content--newsletter__para info__content--section__para"
+          >
+            NorthPack comes with the following mission: to make our clients live
+            a life as comfortable and effortless. Via our design we'll bring you
+            the best quality and make your day to day life easier. Founded in
+            Stockholm, we are a producer of breathtaking backpacks and
+            accessories inspired by Scandinavian design and living.
+          </p>
+        </div>
+
+        <!-- NewsLetter -->
+        <div class="info__content--newsletter info__content--section">
+          <h3
+            class="info__content--newsletter__title info__content--section__title"
+          >
+            Newsletter
+          </h3>
+          <p
+            class="info__content--newsletter__para info__content--section__para"
+          >
+            Subscribe to our newsletter to recive regular updates & news from
+            us.
+          </p>
+          <input type="email" placeholder="Your Email" />
+          <input type="submit" value="Send" />
+        </div>
+
+        <!-- Head Office -->
+        <div class="info__content--adress info__content--section">
+          <!-- Adress -->
+
+          <h3
+            class="info__content--adress__title info__content--section__title"
+          >
+            Head Office
+          </h3>
+          <p class="info__content--adress__para info__content--section__para">
+            177A Bleecker Street
+          </p>
+
+          <!-- Email -->
+
+          <h3
+            class="info__content--adress__title info__content--section__title"
+          >
+            Email Us
+          </h3>
+          <p class="info__content--adress__para info__content--section__para">
+            info@nothpack.com
+          </p>
+
+          <!-- Social icons -->
+
+          <div class="info__content--section__social--icons">
+            <!-- Facebook -->
+            <a href="#" class="info__content--section__social--icons__link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <!-- Instagram -->
+            <a href="#" class="info__content--section__social--icons__link">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- Twitter -->
+            <a href="#" class="info__content--section__social--icons__link">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span class="current--year">2020</span> NorthPack</p>
+    </footer>
+
+    <!--back to top btn-->
+    <a class="scroll-link top-link" href="#Home">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+  </body>
+</html>

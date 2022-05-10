@@ -1,0 +1,99 @@
+.types {
+  grid-column: container-start / container-end;
+  // height: 800px;
+
+  &--container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-rows: 1fr;
+
+    &-holder {
+      @extend %flex-center;
+      height: 100vh;
+      position: relative;
+      //text
+      &:hover .types--container-holder__text-overlay,
+      &:active .types--container-holder__text-overlay {
+        opacity: 1;
+      }
+      &__text {
+        a:link,
+        a:visited {
+          color: var(--clr-primary-white);
+          font-family: "Rum Raisin", sans-serif;
+          font-size: font-size("font-size-medium");
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          cursor: pointer;
+
+          &:after {
+            display: block;
+            content: "";
+            border-bottom: solid 5px var(--clr-primary-white);
+            transform: scaleX(0);
+            transition: transform 0.25s ease-in-out;
+          }
+
+          &:hover::after,
+          &:active::after {
+            transform: scaleX(1);
+          }
+        }
+        &-overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: 0.5s ease;
+        }
+      }
+      //img
+      @for $img from 1 through 3 {
+        &.gallery__content-#{$img} {
+          background-image: url("../assets/3.Types/backpack-#{$img}.webp");
+          @extend %bg;
+          display: block;
+          &:hover,
+          &:active {
+            filter: grayscale(50%);
+          }
+        }
+      }
+    }
+  }
+
+  @include media-tablet {
+    &--container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto-fit, minmax(30rem, 1fr));
+
+      &-holder {
+        &__text {
+          h1 {
+            font-size: font-size("font-size-superlarge");
+            z-index: 1;
+          }
+          &-overlay {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-tablet {
+    &--container {
+      &-holder {
+        height: 80vh;
+      }
+    }
+  }
+}

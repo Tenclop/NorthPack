@@ -1,0 +1,88 @@
+.arrivals {
+  grid-column: container-start / container-end;
+  //delete after
+
+  &--container {
+    display: grid;
+    grid-template-columns: repeat((auto-fit, minmax(30rem, 1fr)));
+    grid-template-rows: 1fr;
+    height: 100%;
+    width: 100%;
+    &__newArrivals {
+      background-color: var(--clr-primary-black-modify);
+      color: var(--clr-primary-white);
+      font-family: "Rum Raisin", sans-serif;
+
+      &-txt {
+        @extend %flex-center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+      }
+
+      h1 {
+        font-size: font-size("font-size-large");
+        // padding: 18rem 2rem 0 2rem;
+      }
+
+      &-shopNow a:link,
+      &-shopNow a:visited {
+        font-size: font-size("font-size-medium") !important;
+        // padding: 4rem 2rem 18rem 2rem;
+        cursor: pointer;
+
+        &:after {
+          display: block;
+          content: "";
+          border-top: solid 5px var(--clr-primary-white);
+          transform: scaleX(0);
+          transition: transform 0.25s ease-in-out;
+        }
+
+        &:hover:after,
+        &:active:after {
+          transform: scaleX(1);
+        }
+      }
+    }
+
+    &__imgContainer {
+      height: 100%;
+      width: 100%;
+
+      // @extend %sec-padding;
+
+      background-image: url("../assets/2.New-arrivals/arrivals.webp");
+      @extend %bg;
+    }
+  }
+
+  @include media-betweenTD {
+    &--container {
+      height: 100%;
+      width: 100%;
+      &__newArrivals {
+        background-image: url("../assets/2.New-arrivals/arrivals.webp");
+        object-fit: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 15px solid transparent;
+        border-image: linear-gradient(
+            90deg,
+            var(--clr-secondary-orange) 0%,
+            var(--clr-primary-orange-m) 100%
+          )
+          0.5;
+
+        h1 {
+          padding-bottom: 2rem;
+        }
+      }
+
+      &__imgContainer {
+        display: none;
+      }
+    }
+  }
+}

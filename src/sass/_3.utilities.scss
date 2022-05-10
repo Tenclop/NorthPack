@@ -1,0 +1,41 @@
+:root {
+  font-size: 62.5%;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-primary-white) var(--clr-primary-black);
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--clr-primary-black);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--clr-primary-white);
+    border-radius: 20px;
+    border: 3px solid var(--clr-primary-black);
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns:
+    [container-start] 1fr [center-start] repeat(
+      6,
+      [col-start] minmax(min-content, 16.66667rem) [col-end]
+    )
+    [center-end] 1fr [container-end];
+  grid-template-rows: min-content 90vh repeat(9, min-content);
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  font-family: "Rum Raisin", sans-serif;
+  color: var(--clr-primary-white);
+  font-weight: font-weight(font-weight-light);
+  letter-spacing: 0.2rem;
+  font-size: font-size(font-size-small);
+}

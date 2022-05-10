@@ -1,0 +1,99 @@
+html {
+  --clr-primary-white: #ebf7ff;
+  --clr-primary-gray: #bfc3c5be;
+  --clr-primary-gray-m: #f8f2f221;
+  --clr-primary-black: #020202;
+  --clr-primary-black-modify: #050505;
+  --clr-primary-black-modify-2: #0505057e;
+  --clr-secondary-black: #000000;
+
+  --clr-primary-orange: #f68e31;
+  --clr-primary-orange-m: #ebceb448;
+  --clr-secondary-orange: #c69669;
+  --clr-tertiary-orange: #f7af6d;
+
+  scroll-behavior: smooth;
+}
+
+/* Font-Weights */
+
+$font-weights: (
+  "font-weight-thin": 100,
+  "font-weight-light": 300,
+  "font-weight-regular": 400,
+  "font-weight-medium": 500,
+  "font-weight-bold": 700,
+  "font-weight-bolder": 900,
+);
+
+@function font-weight($font-weight-style) {
+  @return map-get($font-weights, $font-weight-style);
+}
+
+/* Font-Size */
+
+$font-sizes: (
+  "font-size-supersmall": calc(0.6rem + 0.5vw),
+  "font-size-mediumsmall": calc(0.8rem + 0.5vw),
+  "font-size-small": calc(1.2rem + 0.5vw),
+  "font-size-regular": calc(1.5rem + 1vw),
+  "font-size-medium": calc(1.5rem + 2vw),
+  "font-size-large": calc(1.5rem + 5vw),
+  "font-size-superlarge": calc(2.5rem + 5vw),
+);
+
+@function font-size($font-size-style) {
+  @return map-get($font-sizes, $font-size-style);
+}
+
+/* Brake points */
+$break-points: (
+  "break-point-supersmall": 360px,
+  "break-point-small": 400px,
+  "break-point-medium": 600px,
+  "break-point-tablet": 800px,
+  "break-point-betweenTD": 1100px,
+  "break-point-desktop": 1300px,
+);
+
+@function break-point($break-point-limit) {
+  @return map-get($break-points, $break-point-limit);
+}
+
+/* back to top btn */
+.top-link {
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: var(--clr-primary-orange);
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  border-radius: 5rem;
+  color: var(--clr-primary-white);
+  animation: bounce 2s ease-in-out infinite;
+
+  visibility: hidden;
+  z-index: -5;
+}
+.show-link {
+  visibility: visible;
+  z-index: 5;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+    opacity: 40%;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 70%;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 40%;
+  }
+}

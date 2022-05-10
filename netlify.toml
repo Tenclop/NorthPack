@@ -1,0 +1,11 @@
+[dev]
+    command = "npm run rundev"
+    targetPort = 3000
+[build]
+
+    functions = "./src/views/main.js"
+  
+[[redirects]]
+    from = "/api/*"
+    to = "/.netlify/functions/:splat"
+    status = 200

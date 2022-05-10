@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+
+    <script
+      src="https://kit.fontawesome.com/fbadad80a0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rum+Raisin&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <!--    
+       font-family: 'Oxygen', sans-serif;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-family: 'Rum Raisin', sans-serif; -->
+    <title>Shop</title>
+  </head>
+  <!--    src="./assets/4.Products/Backpacks/backpack-1.webp" -->
+  <body>
+    <!-- class="container" -->
+    <!-- Section Hero -->
+
+    <!-- Section Header -->
+    <header class="section--hero__header">
+      <!-- hamburger lines container -->
+      <div class="section--hero__header-wrapper_menu">
+        <!-- <div class="section--hero__header-wrapper_menu_line half start"></div> -->
+        <div class="section--hero__header-wrapper_menu_line"></div>
+        <!-- <div class="section--hero__header-wrapper_menu_line half end"></div> -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="section--hero__header__overlay"></div>
+
+      <!-- Nav Container -->
+      <nav class="section--hero__header__nav" id="nav">
+        <!-- Logo -->
+        <a
+          href="index.html"
+          class="section--hero__header__nav--logo scroll-link"
+        >
+          <img src="./assets/logo.png" alt="logo" />
+          NorthPack
+        </a>
+        <div class="section--hero__header__nav--links-container">
+          <ul class="section--hero__header__nav--links-container-ul">
+            <!-- Shop li -->
+            <li class="section--hero__header__nav--links-container-ul__item">
+              <a
+                href="shop.html"
+                class="section--hero__header__nav--links-container-ul__item-a"
+                data-text="Shop"
+                >Shop</a
+              >
+            </li>
+
+            <!-- About li -->
+            <li class="section--hero__header__nav--links-container-ul__item">
+              <a
+                href="index.html#About"
+                class="section--hero__header__nav--links-container-ul__item-a scroll-link"
+                data-text="About"
+                >About</a
+              >
+            </li>
+
+            <!-- Contact li -->
+            <li class="section--hero__header__nav--links-container-ul__item">
+              <a
+                href="index.html#Contact"
+                class="section--hero__header__nav--links-container-ul__item-a scroll-link"
+                data-text="Contact"
+                >Contact</a
+              >
+            </li>
+
+            <!-- Log In li -->
+            <li class="section--hero__header__nav--links-container-ul__item">
+              <a
+                href="#Log In"
+                class="section--hero__header__nav--links-container-ul__item-a scroll-link"
+                data-text="Log In"
+                >Log In</a
+              >
+            </li>
+            <!-- cart -->
+            <li
+              class="section--hero__header__nav--links-container-ul__item"
+              id="cart-info"
+            >
+              <a
+                href="#Cart"
+                class="section--hero__header__nav--links-container-ul__item-a scroll-link"
+                data-text="Cart"
+              >
+                <i class="fas fa-shopping-cart"></i>
+                <!-- <p
+                    class="section--hero__header__nav--links-container-ul__item-a-para"
+                  >
+                    <span id="item-count">2 </span> items - $<span
+                      class="section--hero__header__nav--links-container-ul__item-a-para_item-total"
+                      >10.49</span
+                    >
+                  </p> -->
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="cart" class="section--hero__header__cart">
+        <!-- <div class="section--hero__header__cart-content cart-item">
+          <img
+            src="./assets/4.Products/Backpacks/backpack-1.png"
+            class="img-fluid rounded-circle"
+            id="item-img"
+            alt=""
+          />
+          <div class="section--hero__header__cart-content_item-text">
+            <p
+              id="cart-item-title"
+              class="section--hero__header__cart-content_title"
+            >
+              cart item
+            </p>
+
+            <span
+              id="cart-item-price"
+              class="section--hero__header__cart-content_price"
+              >10.99</span
+            >
+          </div>
+          <a
+            href="#"
+            id="cart-item-remove"
+            class="section--hero__header__cart-content_remove"
+          >
+            <i class="fas fa-trash"></i>
+          </a>
+        </div>
+ 
+        <div class="section--hero__header__cart-content cart-item">
+          <img
+            src="./assets/4.Products/Backpacks/backpack-1.png"
+            class="img-fluid rounded-circle"
+            id="item-img"
+            alt=""
+          />
+          <div class="section--hero__header__cart-content_item-text">
+            <p
+              id="cart-item-title"
+              class="section--hero__header__cart-content_title"
+            >
+              cart item
+            </p>
+            <span
+              id="cart-item-price"
+              class="section--hero__header__cart-content_price"
+              >10.99</span
+            >
+          </div>
+          <a
+            href="#"
+            id="cart-item-remove"
+            class="section--hero__header__cart-content_remove"
+          >
+            <i class="fas fa-trash"></i>
+          </a>
+        </div> -->
+
+        <!-- cart total -->
+        <div class="section--hero__header__cart-content_total">
+          <h5>total &nbsp</h5>
+          <h5>$<strong id="cart-total">0</strong></h5>
+        </div>
+        <!--end cart total -->
+
+        <!-- cart buttons -->
+        <div class="section--hero__header__cart-content_buttons">
+          <a href="#" id="clear-cart" class="btn">clear cart</a>
+          <a href="http://localhost:3000" class="btn btn-checkout">checkout</a>
+        </div>
+        <!--end of  cart buttons -->
+        <!--  -->
+      </div>
+
+      <div class="section--hero__login-page_overlay"></div>
+      <div class="section--hero__login-page">
+        <div class="section--hero__login-page__form">
+          <form
+            class="section--hero__form--register-form"
+            id="registration-form"
+          >
+            <div class="section--hero__form--register-form__username">
+              <label for="stuff" class="fa-solid fa-user-ninja"></label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Name"
+                required
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="section--hero__form--register-form__password">
+              <label class="fa-solid fa-unlock"></label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required
+                autocomplete="off"
+              />
+            </div>
+            <div class="section--hero__form--register-form__email">
+              <label class="fa-solid fa-envelope"></label>
+              <input
+                type="text"
+                id="email"
+                placeholder="Email address"
+                required
+                autocomplete="off"
+              />
+            </div>
+            <button type="submit">create</button>
+            <p class="section--hero__form--register-form_message">
+              <span>Already registered?</span>
+              <a href="#" class="signIn fade">Sign In</a>
+            </p>
+          </form>
+          <!--  -->
+          <form class="section--hero__form--login-form">
+            <div class="section--hero__form--login-form__username">
+              <label for="stuff" class="fa-solid fa-user-ninja"></label>
+              <input type="text" placeholder="Username" required />
+            </div>
+
+            <div class="section--hero__form--login-form__password">
+              <label class="fa-solid fa-unlock"></label>
+              <input type="password" placeholder="Password" required />
+            </div>
+            <button type="submit">login</button>
+            <p class="section--hero__form--register-form_message">
+              <span>Not registered?</span>
+              <a href="#" class="register fade">Create an account</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <!-- Section arrivals -->
+    <!-- Slider main container -->
+    <section class="section--arrivals">
+      <div class="section--arrivals__title">
+        <h1>NEW ARRIVALS</h1>
+      </div>
+      <div class="center">
+        <!--         <div class="swiper"> 
+           Additional required wrapper 
+          <div class="swiper-wrapper">
+             Slides 
+            <div class="swiper-slide">
+              <img
+                src="./assets/4.Products/Duffle-bags/duffleBag-1.webp"
+                alt=""
+  
+              />
+              <h3>Duffle Bag</h3>
+              <h3>$119.00</h3>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/4.Products/Travel-packs/travelPack-1.webp"
+                alt=""
+              />
+              <h3>Tehnical Backpack</h3>
+              <h3>$130.00</h3>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/4.Products/Backpacks/backpack-1.webp" alt="" />
+              <h3>Standard Backpack</h3>
+              <h3>$64.99</h3>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/4.Products/Duffle-bags/duffleBag-2.webp"
+                alt=""
+              />
+              <h3>Duffle Bag</h3>
+              <h3><s>$130.00</s>&nbsp $99.99</h3>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="./assets/4.Products/Travel-packs/travelPack-2.webp"
+                alt=""
+              />
+              <h3>Tehnical Backpack</h3>
+              <h3>$130.00</h3>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/4.Products/Backpacks/backpack-2.webp" alt="" />
+              <h3>Standard Backpack</h3>
+              <h3><s>$64.99</s>&nbsp $37.99</h3>
+            </div>
+          </div>
+           If we need pagination 
+           <div class="swiper-pagination"></div> 
+
+           If we need navigation buttons 
+          <div class="swiper-button-prev swiper-button"></div>
+          <div class="swiper-button-next swiper-button"></div>
+
+           If we need scrollbar 
+           <div class="swiper-scrollbar"></div> 
+        </div> -->
+      </div>
+    </section>
+
+    <section class="section--allProducts">
+      <div class="section--allProducts__title">
+        <h1>All Products</h1>
+      </div>
+      <div class="section--allProducts__container">
+        <!--         <div class="section--allProducts__container-products">
+          <img
+            src="./assets/4.Products/Backpacks/backpack-1.png"
+            alt=""
+          />
+          <div class="section--allProducts__container-products_txt">
+            <h3 class="section--allProducts__container-products_txt_addToCart">
+              Add To Cart
+            </h3>
+            <h3>Duffle Bag</h3>
+            <h3>$119.00</h3>
+          </div>
+        </div>
+
+
+        <div class="section--allProducts__container-products">
+          <img
+            src="./assets/4.Products/Backpacks/backpack-1.png"
+            alt=""
+          />
+          <div class="section--allProducts__container-products_txt">
+            <h3 class="section--allProducts__container-products_txt_addToCart">
+              Add To Cart
+            </h3>
+            <h3>Duffle Bag</h3>
+            <h3>$119.00</h3>
+          </div>
+        </div>
+     
+
+        <div class="section--allProducts__container-products">
+          <img
+            src="./assets/4.Products/Backpacks/backpack-1.png"
+            alt=""
+          />
+          <div class="section--allProducts__container-products_txt">
+            <h3 class="section--allProducts__container-products_txt_addToCart">
+              Add To Cart
+            </h3>
+            <h3>Duffle Bag</h3>
+            <h3>$119.00</h3>
+          </div>
+        </div>
+
+     
+        <div class="section--allProducts__container-products">
+          <img
+            src="./assets/4.Products/Backpacks/backpack-1.png"
+            alt=""
+          />
+          <div class="section--allProducts__container-products_txt">
+            <h3 class="section--allProducts__container-products_txt_addToCart">
+              Add To Cart
+            </h3>
+            <h3>Duffle Bag</h3>
+            <h3>$119.00</h3>
+          </div>
+        </div>
+
+       
+
+        <div class="section--allProducts__container-products">
+          <img
+            src="./assets/4.Products/Backpacks/backpack-1.png"
+            alt=""
+          />
+          <div class="section--allProducts__container-products_txt">
+            <h3 class="section--allProducts__container-products_txt_addToCart">
+              Add To Cart
+            </h3>
+            <h3>Duffle Bag</h3>
+            <h3>$119.00</h3>
+          </div>
+        </div>
+
+     
+
+        <div class="section--allProducts__container-products">
+          <img
+            src="./assets/4.Products/Backpacks/backpack-1.png"
+            alt=""
+          />
+          <div class="section--allProducts__container-products_txt">
+            <h3 class="section--allProducts__container-products_txt_addToCart">
+              Add To Cart
+            </h3>
+            <h3>Duffle Bag</h3>
+            <h3>$119.00</h3>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  </body>
+</html>

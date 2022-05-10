@@ -1,0 +1,19 @@
+.footer {
+  grid-column: container-start / container-end;
+  background-color: var(--clr-primary-black);
+
+  @extend %flex-center;
+
+  p {
+    color: var(--clr-primary-white);
+    font-size: font-size("font-size-mediumsmall");
+    font-family: "Poppins", sans-serif;
+    padding: 2rem 4rem;
+  }
+
+  @include media-medium {
+    p {
+      font-size: font-size("font-size-small");
+    }
+  }
+}
