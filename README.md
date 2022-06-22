@@ -27,7 +27,7 @@
 
 <p> 
   To clone and run this application/ website, you'll need Git and Node.js(which comes with npm) installed on your computer.
-  Fron your command line: 
+  From your command line: 
   
   ```
   # Clone this repository
